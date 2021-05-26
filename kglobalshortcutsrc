@@ -12,6 +12,17 @@ _k_friendly_name=Keyboard Layout Switcher
 _k_friendly_name=Alacritty
 _launch=Meta+Return,,
 
+[brave_brave.desktop]
+_k_friendly_name=Brave Web Browser
+_launch=Meta+B,,Brave Web Browser
+new-private-window=,,New Incognito Window
+new-window=,,New Window
+
+[code-oss.desktop]
+_k_friendly_name=Code - OSS
+_launch=,,Code - OSS
+new-empty-window=Meta+C,,New Empty Window
+
 [kaccess]
 Toggle Screen Reader On and Off=Meta+Alt+S,Meta+Alt+S,Toggle Screen Reader On and Off
 _k_friendly_name=Accessibility
@@ -266,6 +277,7 @@ activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
 activate widget 14=,none,Activate Application Menu Widget
 activate widget 22=Alt+F1,none,Activate Application Menu Widget
+activate widget 35=Meta+Space,none,Activate Application Menu Widget
 clear-history=none,none,Clear Clipboard History
 clipboard_action=Ctrl+Alt+X,Ctrl+Alt+X,Enable Clipboard Actions
 cycleNextAction=none,none,Next History Item
