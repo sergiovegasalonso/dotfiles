@@ -11,17 +11,12 @@ from libqtile.lazy import lazy
 
 mod = "mod4"
 terminal = "alacritty"
-colors = [["#282c34", "#282c34"], # panel background
-          ["#3d3f4b", "#434758"], # background for current screen tab
-          ["#ffffff", "#ffffff"], # font color for group names
+colors = [["#333333", "#333333"], # panel background
+          ["#555555", "#555555"], # background for current screen tab
+          ["#f5f5f5", "#f5f5f5"], # font color for group names
           ["#ff5555", "#ff5555"], # border line color for current tab
-          ["#74438f", "#74438f"], # border line color for 'other tabs' and color for 'odd widgets'
-          ["#4f76c7", "#4f76c7"], # color for the 'even widgets'
-          ["#e1acff", "#e1acff"], # window name
-          ["#ecbbfb", "#ecbbfb"]] # backbround for inactive screens
-
-prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
-
+          ["#FF6347", "#FF6347"], # window name
+          ["#FF6347", "#FF6347"]] # background for inactive screens
 
 keys = [
     # General functions
@@ -94,8 +89,8 @@ for i, (name, kwargs) in enumerate(group_names, 1):
 
 layout_theme = {"border_width": 2,
                 "margin": 8,
-                "border_focus": "e1acff",
-                "border_normal": "1D2330"
+                "border_focus": "#ff5555",
+                "border_normal": "#f5f5f5"
                 }
 
 layouts = [
@@ -160,13 +155,13 @@ screens = [
                     padding_x = 3,
                     borderwidth = 3,
                     active = colors[2],
-                    inactive = colors[7],
+                    inactive = colors[3],
                     rounded = False,
                     highlight_color = colors[1],
                     highlight_method = "line",
-                    this_current_screen_border = colors[6],
+                    this_current_screen_border = colors[5],
                     this_screen_border = colors [4],
-                    other_current_screen_border = colors[6],
+                    other_current_screen_border = colors[5],
                     other_screen_border = colors[4],
                     foreground = colors[2],
                     background = colors[0]
@@ -188,7 +183,7 @@ screens = [
                     background = colors[0]
                 ),
                 widget.WindowName(
-                    foreground = colors[6],
+                    foreground = colors[2],
                     background = colors[0],
                     padding = 0
                 ),
@@ -202,12 +197,12 @@ screens = [
                 widget.Systray(),
                 widget.CurrentLayout(
                     foreground = colors[2],
-                    background = colors[4],
+                    background = colors[0],
                     padding = 5
                 ),
                 widget.Clock(
                     foreground = colors[2],
-                    background = colors[5],
+                    background = colors[0],
                     format = "%A, %B %d - %H:%M "
                 ),
                 widget.Sep(
