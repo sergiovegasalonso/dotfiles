@@ -18,6 +18,8 @@ colors = [["#333333", "#333333"], # panel background
           ["#FF6347", "#FF6347"], # window name
           ["#FF6347", "#FF6347"]] # background for inactive screens
 
+wallpaper_path = os.path.dirname(os.path.abspath(__file__)) + "/img/"
+
 keys = [
     # General functions
     Key([mod, "control"], "r", lazy.restart(), desc="Restart Qtile"),
@@ -28,10 +30,10 @@ keys = [
         desc="Open Firefox"),
     
     # Switch between windows
-    Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
-    Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
-    Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
-    Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
+    Key([mod, "shift"], "Left", lazy.layout.left(), desc="Move focus to left"),
+    Key([mod, "shift"], "Right", lazy.layout.right(), desc="Move focus to right"),
+    Key([mod, "shift"], "Down", lazy.layout.down(), desc="Move focus down"),
+    Key([mod, "shift"], "Up", lazy.layout.up(), desc="Move focus up"),
 
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
@@ -183,6 +185,7 @@ screens = [
             ],
             24,
         ),
+        wallpaper=os.path.join(wallpaper_path, 'wallpaper.jpg')
     ),
 ]
 
