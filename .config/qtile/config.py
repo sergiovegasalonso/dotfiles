@@ -30,10 +30,10 @@ keys = [
         desc="Open Firefox"),
     
     # Switch between windows
-    Key([mod, "shift"], "Left", lazy.layout.left(), desc="Move focus to left"),
-    Key([mod, "shift"], "Right", lazy.layout.right(), desc="Move focus to right"),
-    Key([mod, "shift"], "Down", lazy.layout.down(), desc="Move focus down"),
-    Key([mod, "shift"], "Up", lazy.layout.up(), desc="Move focus up"),
+    Key([mod], "Left", lazy.layout.left(), desc="Move focus to left"),
+    Key([mod], "Right", lazy.layout.right(), desc="Move focus to right"),
+    Key([mod], "Down", lazy.layout.down(), desc="Move focus down"),
+    Key([mod], "Up", lazy.layout.up(), desc="Move focus up"),
 
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
